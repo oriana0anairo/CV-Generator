@@ -1,0 +1,107 @@
+/* sección con degradado animado */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+
+  /* Fondo base: dos radiales suaves + degradado lineal */
+  background: radial-gradient(
+      900px 400px at 10% 20%,
+      rgba(255, 250, 240, 0.6),
+      transparent 30%
+    ),
+    radial-gradient(
+      800px 350px at 90% 80%,
+      rgba(245, 248, 255, 0.45),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      /* blanco */ #f6f1e7 25%,
+      /* beige claro */ #e9e9e9 50%,
+      /* gris claro */ #f9e6bf 75%,
+      /* dorado pálido */ #dfe2e5 100% /* plateado claro */
+    );
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* anima la posición de cada capa de fondo para efecto sutil */
+  animation: gradientShift var(--g-duration) ease-in-out infinite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonMain {
+  background: linear-gradient(135deg, #f5c87a, #f9e7c2); /* dorado más vivo */
+  color: #2e2e2e; /* texto más contrastante */
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.buttonMain:hover {
+  background: linear-gradient(135deg, #f3b755, #f6e5c1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.buttonMain:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.titulo-principal {
+  font-size: 2.25rem; /* Tamaño grande y claro */
+  font-weight: 700; /* Negrita para jerarquía */
+  color: #2e2e2e; /* Gris oscuro, suave pero contrastante */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6); /* Luz suave para resaltar en fondo claro */
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.titulo-secundario {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-image {
+  width: 400px;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
