@@ -1,0 +1,67 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.cv-form-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  max-width: 580px;
+  width: 100%;
+}
+
+.cv-form-card h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2e2e2e;
+}
+
+.cv-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cv-form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.cv-form-group input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.cv-form-group input:focus {
+  border-color: #f0c87a;
+  outline: none;
+}
+
+.cv-button {
+  background: linear-gradient(135deg, #f3c87a, #fceabb);
+  color: #2e2e2e;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+}
+
+.cv-button:hover {
+  background: linear-gradient(135deg, #f0c87a, #fff1d6);
+  transform: translateY(-1px);
+}

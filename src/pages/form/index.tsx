@@ -1,34 +1,51 @@
+import { Controller, useForm } from "react-hook-form";
+import "./styles.css";
+import { useTranslation } from "react-i18next";
+
 export const FormPage: React.FC = () => {
+  const { register, control } = useForm();
+  const { t } = useTranslation();
   return (
-    <section className="cv-form">
-      <h1 className="cv-form__title">Información Personal</h1>
+    <form className="cv-form__container">
+      <div className="form-wrapper">
+        <form className="cv-form-card">
+          <h2>{t("form.title")}</h2>
 
-      <form className="cv-form__container">
-        <div className="form-wrapper">
-          <form className="cv-form-card">
-            <h2>Información Personal</h2>
+          <div className="cv-form-group">
+            <label htmlFor="name">{t("form.name")}</label>
+            <input
+              {...register("name", { required: true })}
+              id="name"
+              type="text"
+            />
+          </div>
 
-            <div className="cv-form-group">
-              <label htmlFor="nombre">Nombre Completo</label>
-              <input id="nombre" type="text" />
-            </div>
+          <div className="cv-form-group">
+            <label htmlFor="email">{t("form.email")}</label>
+            <input
+              {...register("email", { required: true })}
+              id="email"
+              type="email"
+            />
+          </div>
 
-            <div className="cv-form-group">
-              <label htmlFor="correo">Correo Electrónico</label>
-              <input id="correo" type="email" />
-            </div>
+          <div className="cv-form-group">
+            <label htmlFor="location">{t("form.location")}</label>
+            <Controller
+              render={({ field }) => (
+                <input {...field} id="location" type="text" />
+              )}
+              name="location"
+              control={control}
+              defaultValue=""
+            />
+          </div>
 
-            <div className="cv-form-group">
-              <label htmlFor="ubicacion">Ubicación</label>
-              <input id="ubicacion" type="text" />
-            </div>
-
-            <button type="submit" className="cv-button">
-              Siguiente
-            </button>
-          </form>
-        </div>
-      </form>
-    </section>
+          <button type="submit" className="cv-button">
+            {t("form.next")}
+          </button>
+        </form>
+      </div>
+    </form>
   );
 };

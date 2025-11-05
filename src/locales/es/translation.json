@@ -1,5 +1,12 @@
 {
   "title": "Bienvenido a tu generador de currículum",
   "subtitle": "Empieza a crear tu CV en minutos",
-  "create": "Crear"
+  "create": "Crear",
+  "form": {
+    "title": "Información Personal",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "location": "Ubicación",
+    "next": "Siguiente"
+  }
 }
