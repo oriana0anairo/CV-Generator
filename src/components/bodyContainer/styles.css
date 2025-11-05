@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonMain {
+  background: linear-gradient(135deg, #f5c87a, #f9e7c2);
+  color: #2e2e2e; /* texto más contrastante */
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.buttonMain:hover {
+  background: linear-gradient(135deg, #f3b755, #f6e5c1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.buttonMain:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.titulo-principal {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2e2e2e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.titulo-secundario {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-image {
+  width: 400px;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.centerContent {
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

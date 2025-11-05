@@ -4,30 +4,30 @@ export const FormPage: React.FC = () => {
       <h1 className="cv-form__title">Información Personal</h1>
 
       <form className="cv-form__container">
-        <div className="cv-form__group">
-          <label htmlFor="name" className="cv-form__label">
-            Nombre Completo
-          </label>
-          <input type="text" id="name" className="cv-form__input" />
-        </div>
+        <div className="form-wrapper">
+          <form className="cv-form-card">
+            <h2>Información Personal</h2>
 
-        <div className="cv-form__group">
-          <label htmlFor="email" className="cv-form__label">
-            Correo Electrónico
-          </label>
-          <input type="email" id="email" className="cv-form__input" />
-        </div>
+            <div className="cv-form-group">
+              <label htmlFor="nombre">Nombre Completo</label>
+              <input id="nombre" type="text" />
+            </div>
 
-        <div className="cv-form__group">
-          <label htmlFor="location" className="cv-form__label">
-            Ubicación
-          </label>
-          <input type="text" id="location" className="cv-form__input" />
-        </div>
+            <div className="cv-form-group">
+              <label htmlFor="correo">Correo Electrónico</label>
+              <input id="correo" type="email" />
+            </div>
 
-        <button type="submit" className="cv-form__submit">
-          Siguiente
-        </button>
+            <div className="cv-form-group">
+              <label htmlFor="ubicacion">Ubicación</label>
+              <input id="ubicacion" type="text" />
+            </div>
+
+            <button type="submit" className="cv-button">
+              Siguiente
+            </button>
+          </form>
+        </div>
       </form>
     </section>
   );
