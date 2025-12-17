@@ -13,16 +13,17 @@ export const TextInputControl: React.FC<TextInputControlProps> = ({
 }) => {
   const { control } = useFormContext();
   return (
-    <div className="cv-form-group">
-      <label htmlFor={name}>{label}</label>
-      <Controller
-        render={({ field }) => (
+    <Controller
+      render={({ field, fieldState: { error } }) => (
+        <div className="cv-form-group">
+          <label htmlFor={name}>{label}</label>
           <input {...field} id={name} type="text" placeholder={placeholder} />
-        )}
-        name={name}
-        control={control}
-        defaultValue=""
-      />
-    </div>
+          {error && <p className="error">{error.message}</p>}
+        </div>
+      )}
+      name={name}
+      control={control}
+      defaultValue=""
+    />
   );
 };

@@ -6,7 +6,7 @@ export const ProfeSummaryInput: React.FC = () => {
   return (
     <TextAreaInput
       label={t("form.professionalSummary")}
-      name="professionalSummary"
+      name="summary"
       placehoder={t("form.yourExperienceStrengthsGoals")}
     />
   );

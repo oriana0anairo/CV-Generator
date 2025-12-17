@@ -8,20 +8,28 @@ import {
   NameInput,
   ProfeSummaryInput,
 } from "../../components";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { cvSchema, type CvFormData } from "../../schema";
+import { useNavigate } from "react-router-dom";
+import { RoutesPath } from "../../enums";
 
 export const FormPage: React.FC = () => {
-  const methods = useForm();
+  const navigate = useNavigate();
+  const methods = useForm<CvFormData>({
+    resolver: zodResolver(cvSchema),
+  });
   const { handleSubmit, getValues } = methods;
   const { t } = useTranslation();
+  const { name, ...rest } = getValues();
 
   const onSubmit = async () => {
     const body = {
       title: getValues("name"),
-      data: getValues("email"),
+      data: rest,
     };
 
     const response = await curriculumService.create(body);
-    console.log(response);
+    if (response.data) navigate(RoutesPath.preview);
   };
 
   return (

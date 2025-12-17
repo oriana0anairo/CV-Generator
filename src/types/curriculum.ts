@@ -14,5 +14,9 @@ export type CreateResponse = {
 
 export type CreateBody = {
   title: string;
-  data: string;
+  data: {
+    email: string;
+    location: string;
+    summary: string;
+  };
 };

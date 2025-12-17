@@ -13,7 +13,10 @@ export const TextInput: React.FC<TextInputProps> = ({
   multiple,
   placeholder,
 }) => {
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <div className="cv-form-group">
       <label htmlFor={name}>{label}</label>
@@ -24,6 +27,9 @@ export const TextInput: React.FC<TextInputProps> = ({
         multiple={multiple}
         placeholder={placeholder}
       />
+      {errors?.[name] && (
+        <p className="error">{errors?.[name].message as string}</p>
+      )}
     </div>
   );
 };
