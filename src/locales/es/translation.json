@@ -7,6 +7,11 @@
     "name": "Nombre completo",
     "email": "Correo electrónico",
     "location": "Ubicación",
-    "next": "Siguiente"
+    "professionalSummary": "Resumen Profesional",
+    "next": "Siguiente",
+    "yourExperienceStrengthsGoals": "Describe tu experiencia, fortalezas y objetivos.",
+    "namePlaceholder": "Ejemplo: Juan Pérez",
+    "emailPlaceholder": "Ejemplo: juan.perez@example.com",
+    "locationPlaceholder": "Ejemplo: Ciudad, País"
   }
 }

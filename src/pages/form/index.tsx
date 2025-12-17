@@ -2,7 +2,12 @@ import { FormProvider, useForm } from "react-hook-form";
 import "./styles.css";
 import { useTranslation } from "react-i18next";
 import { curriculumService } from "../../services";
-import { EmailInput, LocationInput, NameInput } from "../../components";
+import {
+  EmailInput,
+  LocationInput,
+  NameInput,
+  ProfeSummaryInput,
+} from "../../components";
 
 export const FormPage: React.FC = () => {
   const methods = useForm();
@@ -28,6 +33,7 @@ export const FormPage: React.FC = () => {
             <NameInput />
             <EmailInput />
             <LocationInput />
+            <ProfeSummaryInput />
             <button type="submit" className="cv-button">
               {t("form.next")}
             </button>

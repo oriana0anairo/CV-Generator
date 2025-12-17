@@ -3,5 +3,11 @@ import { TextInput } from "../wrapperInputs";
 
 export const NameInput: React.FC = () => {
   const { t } = useTranslation();
-  return <TextInput label={"name"} name={t("form.name")} />;
+  return (
+    <TextInput
+      label={t("form.name")}
+      name={"name"}
+      placeholder={t("form.namePlaceholder")}
+    />
+  );
 };
