@@ -20,7 +20,9 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
         <div className="cv-form-group">
           <label htmlFor={name}>{label}</label>
           <textarea {...field} id={name} rows={5} placeholder={placehoder} />
-          {error && <p className="error">{error.message}</p>}
+          <div className="container-error">
+            {error && <p className="error">{error.message}</p>}
+          </div>
         </div>
       )}
     />

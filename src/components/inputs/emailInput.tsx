@@ -5,7 +5,7 @@ export const EmailInput: React.FC = () => {
   const { t } = useTranslation();
   return (
     <TextInput
-      label={t("form.email")}
+      label={t("form.email") + " *"}
       name="email"
       placeholder={t("form.emailPlaceholder")}
     />

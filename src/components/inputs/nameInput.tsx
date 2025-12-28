@@ -5,7 +5,7 @@ export const NameInput: React.FC = () => {
   const { t } = useTranslation();
   return (
     <TextInput
-      label={t("form.name")}
+      label={t("form.name") + " *"}
       name={"name"}
       placeholder={t("form.namePlaceholder")}
     />

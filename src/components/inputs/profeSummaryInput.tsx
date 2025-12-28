@@ -5,7 +5,7 @@ export const ProfeSummaryInput: React.FC = () => {
   const { t } = useTranslation();
   return (
     <TextAreaInput
-      label={t("form.professionalSummary")}
+      label={t("form.professionalSummary") + " *"}
       name="summary"
       placehoder={t("form.yourExperienceStrengthsGoals")}
     />

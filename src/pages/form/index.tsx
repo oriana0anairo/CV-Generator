@@ -12,6 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { cvSchema, type CvFormData } from "../../schema";
 import { useNavigate } from "react-router-dom";
 import { RoutesPath } from "../../enums";
+import { toast } from "sonner";
 
 export const FormPage: React.FC = () => {
   const navigate = useNavigate();
@@ -23,13 +24,19 @@ export const FormPage: React.FC = () => {
   const { name, ...rest } = getValues();
 
   const onSubmit = async () => {
-    const body = {
-      title: getValues("name"),
-      data: rest,
-    };
+    try {
+      const body = {
+        title: getValues("name"),
+        data: rest,
+      };
 
-    const response = await curriculumService.create(body);
-    if (response.data) navigate(RoutesPath.preview);
+      await curriculumService.create(body);
+
+      toast.success(t("menssages.cvCreated"));
+      navigate(RoutesPath.preview);
+    } catch (error) {
+      toast.error(t("menssages.cvError"));
+    }
   };
 
   return (

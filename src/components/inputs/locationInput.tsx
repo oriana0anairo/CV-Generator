@@ -5,7 +5,7 @@ export const LocationInput: React.FC = () => {
   const { t } = useTranslation();
   return (
     <TextInputControl
-      label={t("form.location")}
+      label={t("form.location") + " *"}
       name="location"
       placeholder={t("form.locationPlaceholder")}
     />

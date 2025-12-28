@@ -27,9 +27,11 @@ export const TextInput: React.FC<TextInputProps> = ({
         multiple={multiple}
         placeholder={placeholder}
       />
-      {errors?.[name] && (
-        <p className="error">{errors?.[name].message as string}</p>
-      )}
+      <div className="container-error">
+        {errors?.[name] && (
+          <p className="error">{errors?.[name].message as string}</p>
+        )}
+      </div>
     </div>
   );
 };

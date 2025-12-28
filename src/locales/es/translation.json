@@ -13,5 +13,9 @@
     "namePlaceholder": "Ejemplo: Juan Pérez",
     "emailPlaceholder": "Ejemplo: juan.perez@example.com",
     "locationPlaceholder": "Ejemplo: Ciudad, País"
+  },
+  "menssages": {
+    "cvCreated": "✅ Currículum creado correctamente",
+    "cvError": "❌ Error al crear el currículum"
   }
 }

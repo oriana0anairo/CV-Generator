@@ -18,7 +18,9 @@ export const TextInputControl: React.FC<TextInputControlProps> = ({
         <div className="cv-form-group">
           <label htmlFor={name}>{label}</label>
           <input {...field} id={name} type="text" placeholder={placeholder} />
-          {error && <p className="error">{error.message}</p>}
+          <div className="container-error">
+            {error && <p className="error">{error.message}</p>}
+          </div>
         </div>
       )}
       name={name}
