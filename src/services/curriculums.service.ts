@@ -1,4 +1,9 @@
-import type { CreateBody, CreateResponse, GetAllResponse } from "../types";
+import type {
+  CreateBody,
+  CreateResponse,
+  GetAllResponse,
+  GetByIdResponse,
+} from "../types";
 import { http } from "./http";
 
 export const curriculumService = {
@@ -6,4 +11,6 @@ export const curriculumService = {
 
   create: (data: Partial<CreateBody>) =>
     http.post<CreateResponse>("/curriculums", data),
+
+  getById: (id: string) => http.get<GetByIdResponse>(`/curriculums/${id}`),
 };

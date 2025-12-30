@@ -10,6 +10,7 @@ type Curriculum = {
 };
 export type CreateResponse = {
   data: { message: string };
+  id: string;
 };
 
 export type CreateBody = {
@@ -19,4 +20,16 @@ export type CreateBody = {
     location: string;
     summary: string;
   };
+};
+
+export type GetByIdResponse = {
+  id: string;
+  title: string;
+  data: {
+    email: string;
+    location: string;
+    professional: string;
+    summary: string;
+  };
+  createdAt: string;
 };

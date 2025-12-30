@@ -1,0 +1,36 @@
+.cv-preview {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cv-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2e2e2e;
+}
+
+.cv-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.cv-section h2 {
+  font-size: 1.25rem;
+  color: #333399;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e0d7c5;
+  padding-bottom: 0.25rem;
+}
+
+.cv-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cv-section li {
+  margin-bottom: 0.5rem;
+}

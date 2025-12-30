@@ -6,6 +6,7 @@ import {
   EmailInput,
   LocationInput,
   NameInput,
+  ProfessionalTitle,
   ProfeSummaryInput,
 } from "../../components";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,19 +22,19 @@ export const FormPage: React.FC = () => {
   });
   const { handleSubmit, getValues } = methods;
   const { t } = useTranslation();
-  const { name, ...rest } = getValues();
 
   const onSubmit = async () => {
+    const { name, ...rest } = getValues();
     try {
       const body = {
-        title: getValues("name"),
+        title: name,
         data: rest,
       };
 
-      await curriculumService.create(body);
+      const response = await curriculumService.create(body);
 
       toast.success(t("menssages.cvCreated"));
-      navigate(RoutesPath.preview);
+      navigate(RoutesPath.preview + "/" + response.id);
     } catch (error) {
       toast.error(t("menssages.cvError"));
     }
@@ -46,9 +47,11 @@ export const FormPage: React.FC = () => {
           <div className="cv-form-card">
             <h2>{t("form.title")}</h2>
             <NameInput />
+            <ProfessionalTitle />
             <EmailInput />
             <LocationInput />
             <ProfeSummaryInput />
+
             <button type="submit" className="cv-button">
               {t("form.next")}
             </button>

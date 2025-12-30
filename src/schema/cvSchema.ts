@@ -12,6 +12,7 @@ export const cvSchema = z.object({
   summary: z
     .string({ error: "Escribe al menos 10 caracteres" })
     .min(10, "Escribe al menos 10 caracteres"),
+  professional: z.string().min(2, "El título profesional es obligatorio"),
 });
 
 export type CvFormData = z.infer<typeof cvSchema>;

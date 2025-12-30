@@ -8,6 +8,8 @@
     "email": "Correo electrónico",
     "location": "Ubicación",
     "professionalSummary": "Resumen Profesional",
+    "professionalTitle": "Título Profesional",
+    "professionalTitlePlaceholder": "Ejemplo: Desarrollador Full Stack",
     "next": "Siguiente",
     "yourExperienceStrengthsGoals": "Describe tu experiencia, fortalezas y objetivos.",
     "namePlaceholder": "Ejemplo: Juan Pérez",

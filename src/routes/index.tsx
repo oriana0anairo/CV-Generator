@@ -7,7 +7,7 @@ export const RoutesProvider: React.FC = () => {
     <Routes>
       <Route path={RoutesPath.form} element={<FormPage />} />
       <Route path={RoutesPath.main} element={<MainPage />} />
-      <Route path={RoutesPath.preview} element={<PreviewPage />} />
+      <Route path={RoutesPath.preview + "/:id"} element={<PreviewPage />} />
       <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
     </Routes>
   );
