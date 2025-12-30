@@ -40,7 +40,7 @@ export const PreviewPage = () => {
             </li>
           </ul>
           <h2>Resumen Profesional</h2>
-          <p>{details?.data.professional}</p>
+          <p>{details?.data.summary}</p>
         </section>
       </div>
     </div>
